@@ -1,0 +1,8 @@
+1. Write a description for a while loop.
+It is a system that repeats itself everytime that what the code says is true.
+
+2. Write a description for a for loop.
+It is a system that repeats for making a sequence in the code.
+
+3. Compare a while loop to a for loop.
+They both repeat, but they are different on the type of cycle and sequence of the code you want.
