@@ -8,7 +8,8 @@ def main():
 
 
 def binary_to_decimal(binary):
-    transform = 2*{list}
+
+    2+{list}
 
 if __name__ == "__main__":
     main()
