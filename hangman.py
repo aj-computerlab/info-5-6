@@ -9,4 +9,21 @@
 # choose = random.choice(Txt)
 # print("Enter a Letter to guess the word", choose)
 # Create a while loop so the program runs as long the user still has lives
-#
+
+import random
+
+def main():
+
+    start_game("List.txt")
+
+def start_game(file):
+    with open(file) as word_file:
+        words = word_file.read().splitlines()
+
+    for i in range(len(words)):
+        words[i] = int(words[i])
+
+    print(max(words))
+
+if __name__ == "__main__":
+    main()
