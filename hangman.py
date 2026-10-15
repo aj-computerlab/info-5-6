@@ -13,17 +13,41 @@
 import random
 
 def main():
-
-    start_game("List.txt")
+    start_game("word_bank.txt")
 
 def start_game(file):
-    with open(file) as word_file:
-        words = word_file.read().splitlines()
+    attempts = 10
+    with open(file) as f:
+        word_bank = f.read().splitlines()
+    word = random.choice(word_bank)
+    hint = ["_"] * len(word)
+    incorrect_letters = []
+    while attempts > 0:
+        print("Current word:", " ".join(hint))
 
-    for i in range(len(words)):
-        words[i] = int(words[i])
+        while True:
+            guess = input ("Guess a letter: ").lower()
+            if len(guess) == 1:
+                break
+            else:
+                print("Invalid guess. Try again.")
 
-    print(max(words))
+        if guess in word and guess not in hint:
+            for i in range(len(word)):
+                if word[i] == guess:
+                    hint[i] = guess
+            print("Great guess!")
+        elif guess in hint:
+            attempts = -1
+            print("You already guessed that letter! Attempts left:", str(attempts))
+
+        if "_" not in hint:
+            print("Congratulations! 🥳 You guessed the word:", word)
+            break
+
+    if attempts == 0 and "_" in hint:
+        print("No attempts left 💀 The word was:", word)
 
 if __name__ == "__main__":
     main()
+
