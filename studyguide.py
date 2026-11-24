@@ -1,0 +1,9 @@
+#Weekly 1 = Give values
+#Weekly 2 = Math Operations
+#Weekly 3 = if/elif
+#Weekly 4 = random. - while/if/else/break
+#Weekly 5 = for - list references
+#Weekly 6 = Letter - Tables
+#Weekly 7 = try - except
+#Weekly 8 = binary - highest/lowest - multiple defs
+#Weekly 9 = txt - terminal reading files
